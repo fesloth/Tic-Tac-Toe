@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe with bot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(228, 143, 165);
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      table td {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        border: 1px solid #000;
+        cursor: pointer;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      table td {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(181, 35, 35);
+        text-align: center;
+        font-size: 48px;
+        cursor: pointer;
+        color: rgb(163, 67, 131);
+      }
+
+      button {
+        background-color: rgb(135, 33, 33);
+        border: transparent;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 5px rgb(82, 65, 82);
+        cursor: pointer;
+        margin-top: 20px;
+        color: rgb(215, 217, 218);
+      }
+
+      button:hover {
+        background-color: rgb(162, 68, 68);
+      }
+
+      #status {
+        color: #903131;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      footer {
+        font-family: "Lucida Sans", sans-serif;
+        color: rgb(70, 69, 69);
+        text-align: right;
+        margin-left: auto;
+        margin-top: 100px;
+      }
+
+      footer a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: rgb(110, 11, 11); padding-top: 30px; text-align: center">Nikmati permainan dengan bot!</h1>
+    <p style="margin-top: 0; color: #903131">player: X | bot: O</p>
+    <table>
+      <tr>
+        <td onclick="makeMove(0)"></td>
+        <td onclick="makeMove(1)"></td>
+        <td onclick="makeMove(2)"></td>
+      </tr>
+      <tr>
+        <td onclick="makeMove(3)"></td>
+        <td onclick="makeMove(4)"></td>
+        <td onclick="makeMove(5)"></td>
+      </tr>
+      <tr>
+        <td onclick="makeMove(6)"></td>
+        <td onclick="makeMove(7)"></td>
+        <td onclick="makeMove(8)"></td>
+      </tr>
+    </table>
+    <h2 id="status"></h2>
+    <button style="margin-top: 0" onclick="resetGame()">Reset Game</button>
+    <footer>
+      <a href="../index.html"><i class="fa-solid fa-arrow-left-long"></i> Kembali ke Beranda</a>
+      <p>
+        &copy;Tic Tac Toe || Developer by <a href="https://github.com/fesloth"><i class="fa-brands fa-github"></i> Syahla</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

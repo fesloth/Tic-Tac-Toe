@@ -1,96 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: rgb(231, 206, 255);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+      body {
+        background-color: cornsilk;
+      }
 
-    #player {
-        font-family: 'Lucida Sans', sans-serif;
-        color: rgb(163, 96, 226);
-    }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
 
-    #winner {
-        font-family: monospace;
-        color: salmon;
-    }
-    
-    table {
-      border-collapse: collapse;
-    }
-    
-    table td {
-      width: 100px;
-      height: 100px;
-      border: 2px solid rgb(181, 35, 147);
-      text-align: center;
-      font-size: 48px;
-      cursor: pointer;
-      color: rgb(149, 101, 194);
-    }
-    
-    button {
-      background-color: plum;
-      border: transparent;
-      padding: 10px 20px;
-      border-radius: 4px;
-      box-shadow: 0px 2px 5px purple;
-      cursor: pointer;
-    }
+      .boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    button:hover {
-        background-color: rgb(171, 128, 171);
-    }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(195, 187, 165);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+      }
 
-    footer {
-      font-family: 'Lucida Sans', sans-serif;
-      color: gray;
-      text-align: right;
-      margin-left: auto;
-      margin-top: 100px
-    }
+      .box a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-    footer a {
-      text-decoration: none;
-      color: black;
-    }
-  </style>
-</head>
-<body>
-  <h1 id="player">Player 1</h1>
-  <table>
-    <tr>
-      <td onclick="play(this)"></td>
-      <td onclick="play(this)"></td>
-      <td onclick="play(this)"></td>
-    </tr>
-    <tr>
-      <td onclick="play(this)"></td>
-      <td onclick="play(this)"></td>
-      <td onclick="play(this)"></td>
-    </tr>
-    <tr>
-      <td onclick="play(this)"></td>
-      <td onclick="play(this)"></td>
-      <td onclick="play(this)"></td>
-    </tr>
-  </table>
-  <h2 id="winner"></h2>
-  <button onclick="resetGame()">Reset</button>
-  <footer>
-    <p>&copy;Tic Tac Toe || Developer by <a href="https://github.com/fesloth"><i class="fa-brands fa-github"></i> Syahla</a></p>
-  </footer>
-</body>
-<script src="script.js"></script>
+      .box i {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      .box p {
+        margin-top: 0;
+        color: rgb(80, 77, 68);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        color: rgb(99, 93, 47);
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      #bot {
+        color: rgb(174, 82, 82);
+      }
+
+      #bot:hover {
+        color: brown;
+      }
+
+      #player {
+        color: rgb(158, 81, 148);
+      }
+
+      #player:hover {
+        color: blueviolet;
+      }
+
+      /* Aturan media query */
+      @media only screen and (max-width: 600px) {
+        .boxes {
+          flex-direction: column;
+        }
+        .box {
+          margin: 10px auto;
+        }
+        h1 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Klik ikon untuk memilih jenis permainan</h1>
+      <div class="boxes">
+        <div class="box left-box">
+          <a href="bot/index.html">
+            <i id="bot" class="fas fa-robot"></i>
+            <p>Bermain dengan Bot</p>
+          </a>
+        </div>
+        <div class="box right-box">
+          <a href="battle/index.html" style="margin-top: 20px">
+            <i id="player" class="fas fa-play"></i>
+            <p>
+              Bermain secara <br />
+              berpasangan!
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+  </body>
 </html>

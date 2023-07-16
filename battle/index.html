@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: rgb(231, 206, 255);
+    }
+
+    #player {
+        font-family: 'Lucida Sans', sans-serif;
+        color: rgb(163, 96, 226);
+    }
+
+    #winner {
+        font-family: monospace;
+        color: salmon;
+    }
+    
+    table {
+      border-collapse: collapse;
+    }
+    
+    table td {
+      width: 100px;
+      height: 100px;
+      border: 2px solid rgb(181, 35, 147);
+      text-align: center;
+      font-size: 48px;
+      cursor: pointer;
+      color: rgb(149, 101, 194);
+    }
+    
+    button {
+      background-color: plum;
+      border: transparent;
+      padding: 10px 20px;
+      border-radius: 4px;
+      box-shadow: 0px 2px 5px purple;
+      cursor: pointer;
+    }
+
+    button:hover {
+        background-color: rgb(171, 128, 171);
+    }
+
+    footer {
+      font-family: 'Lucida Sans', sans-serif;
+      color: gray;
+      text-align: right;
+      margin-left: auto;
+      margin-top: 100px
+    }
+
+    footer a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="player">Player 1</h1>
+  <table>
+    <tr>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+    </tr>
+    <tr>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+    </tr>
+    <tr>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+      <td onclick="play(this)"></td>
+    </tr>
+  </table>
+  <h2 id="winner"></h2>
+  <button onclick="resetGame()">Reset</button>
+  <footer>
+    <a href="../index.html"><i class="fa-solid fa-arrow-left-long"></i> Kembali ke Beranda</a>
+    <p>&copy;Tic Tac Toe || Developer by <a href="https://github.com/fesloth"><i class="fa-brands fa-github"></i> Syahla</a></p>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
